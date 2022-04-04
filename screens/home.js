@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { globalStyles } from "../styles/global";
+import Card from "../components/card";
 
 export default function Home({ navigation }) {
   const [reviews, setReviews] = useState([
@@ -25,10 +26,20 @@ export default function Home({ navigation }) {
           <TouchableOpacity
             onPress={() => navigation.navigate("Details", item)}
           >
-            <Text>{item.title}</Text>
+            <Card>
+              <Text style={styles.title}>{item.title}</Text>
+            </Card>
           </TouchableOpacity>
         )}
       />
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  title: {
+    fontSize: 20,
+    fontWeight: "300",
+    fontFamily: "Bungee_400Regular",
+  },
+});
