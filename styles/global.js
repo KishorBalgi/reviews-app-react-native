@@ -15,10 +15,16 @@ export const globalStyles = StyleSheet.create({
     lineHeight: 20,
   },
   input: {
-    backgroundColor: "#eee",
+    borderColor: "#eee",
+    borderWidth: 2,
     padding: 10,
-    marginVertical: 10,
+    marginVertical: 5,
     borderRadius: 6,
     fontSize: 16,
+  },
+  errorText: {
+    color: "red",
+    marginVertical: 5,
+    fontWeight: "bold",
   },
 });

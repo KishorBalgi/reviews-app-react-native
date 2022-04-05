@@ -25,7 +25,6 @@ export default function Home({ navigation }) {
     { title: "Hello World 5", rating: 2, body: "lorem epsum", key: "5" },
   ]);
   function addReviews(data) {
-    if (!data.title || !data.body || !data.rating) return;
     data.key = Math.random().toString();
     setReviews((curr) => [data, ...curr]);
     setModalOpen(false);
